@@ -19,15 +19,15 @@
       debugger;
 
       const input1 = prompt('enter a number');
-      const num1 = _(input1);
+      const num1 = Number(input1);
 
       const input2 = prompt('enter the same number');
-      const num2 = _(input2);
+      const num2 = Number(input2);
 
       let result;
-      if (_.isNaN(_)) {
+      if (Number.isNaN(num1)) {
         result = 'first input is not a number';
-      } else if (_.isNaN(_)) {
+      } else if (Number.isNaN(num2)) {
         result = 'second input is not a number';
       } else {
         result = `are they the same? ${num1 === num2}`;

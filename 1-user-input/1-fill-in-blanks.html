@@ -15,12 +15,12 @@
     const stringToRepeat = prompt('enter some text to repeat ...');
 
     const repetitionsStr = prompt('... and how many times to repeat it');
-    const repetitions = _(repetitionsStr);
+    const repetitions = Number(repetitionsStr);
 
     // program logic
     let repeated = '';
-    for (let i = _; i < _; i++) {
-      repeated += _;
+    for (let i = 0; i < repetitions; i++) {
+      repeated += stringToRepeat;
     }
 
     // respond to user
