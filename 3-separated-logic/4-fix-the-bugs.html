@@ -17,11 +17,11 @@
 
       let comparison;
       if (typeof valueA === typeof valueB) {
-        comparison += 'different types';
+        comparison = 'same type, different values';
       } if (valueA === valueB) {
-        comparison += 'same type, different values';
+        comparison =  'strictly equal';
       } else {
-        comparison += 'strictly equal'
+        comparison = 'different types';
       }
 
       if (typeof comparison !== 'boolean') { throw new TypeError() };

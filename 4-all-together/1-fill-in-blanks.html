@@ -22,15 +22,15 @@
        * @returns {number}
        */
     function sumInRange(lowest, highest) {
-      if (typeof lowest !== '_') { throw new TypeError(); }
-      if (typeof highest !== '_') { throw new TypeError(); }
+      if (typeof lowest !== 'number') { throw new TypeError(); }
+      if (typeof highest !== 'number') { throw new TypeError(); }
 
-      let sumOfAll = _;
-      for (let i = _; i <= _; i_) {
-        _ += i;
+      let sumOfAll = 0;
+      for (let i = lowest; i <= highest; i++) {
+        sumOfAll += i;
       }
 
-      if (typeof sumOfAll !== '_') { throw new TypeError() };
+      if (typeof sumOfAll !== 'number') { throw new TypeError() };
       return sumOfAll;
     }
 
@@ -67,14 +67,14 @@
       debugger;
 
       const input1 = prompt('first number');
-      const num1 = _(input1);
+      const num1 = Number(input1);
 
       const input2 = prompt('second number');
-      const num2 = _(input2);
+      const num2 = Number(input2);
 
-      const sum = _(num1, num2);
+      const sum = sumInRange(num1, num2);
 
-      alert(_);
+      alert(sum);
 
       console.log('-- interaction log --');
       console.log('input1:', typeof input1, '\n', input1);

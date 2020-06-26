@@ -19,16 +19,16 @@
       debugger;
 
       const input1 = prompt('first number');
-      const num1 = String(input1);
+      const num1 = Number(input1);
 
       const input2 = prompt('second number');
-      const num2 = String(input2);
+      const num2 = Number(input2);
 
       let sumOfAll = 0;
-      let i = number1;
-      while (i < number2) {
+      let i = num1;
+      while (i <= num2) {
         sumOfAll += i;
-        i;
+        i++;
       }
 
       alert(sumOfAll);
@@ -45,7 +45,7 @@
 
 <body>
   <section id='user-interface' class='centered'>
-    <button onclick='sumAllHandler'>Sum all numbers from ...</button>
+    <button onclick='sumAllHandler()'>Sum all numbers from ...</button>
   </section>
 </body>
 

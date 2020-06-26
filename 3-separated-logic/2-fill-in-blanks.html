@@ -18,12 +18,12 @@
 
       // return directly from the conditional since the return value can be any type
       //  no need to check before returning
-      if (_) {
-        return _;
-      } else if (_) {
-        return _;
-      } else if (_) {
-        return _;
+      if (operator === 'and') {
+        return x && y;
+      } else if (operator === 'or') {
+        return x || y;
+      } else if (operator === 'nullish') {
+        return x ?? y;
       } else {
         throw new Error(`"${operator}" is not a valid operator`);
       }

@@ -26,16 +26,16 @@
       if (typeof highest !== 'number') { throw new TypeError(); }
 
       let sumOfEvens = 0;
-      for (let i = lowest; i === highest; i++) {
+      for (let i = lowest; i <= highest; i++) {
         if (i % 2 !== 0) {
           continue;
         }
 
-        sumOfEvens + i;
+        sumOfEvens += i;
       }
 
-      if (typeof sum !== 'boolean') { throw new TypeError() };
-      return sum;
+      if (typeof sumOfEvens !== 'number') { throw new TypeError() };
+      return sumOfEvens;
     }
   </script>
 
@@ -69,10 +69,10 @@
       debugger;
 
       const input1 = prompt('first number');
-      const num1 = input1;
+      const num1 = Number(input1);
 
       const input2 = prompt('second number');
-      const num2 = input2;
+      const num2 = Number(input2);
 
       const sum = sumAllEvens(num2, num1);
 

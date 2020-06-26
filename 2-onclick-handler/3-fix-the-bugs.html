@@ -19,17 +19,17 @@
       debugger;
 
       const input1 = prompt('first number');
-      const num1 = Boolean(input1);
+      const num1 = Number(input1);
 
       const input2 = prompt('second number');
-      const num2 = Boolean(input2);
+      const num2 = Number(input2);
 
       let listOfNumbers = '';
-      for (let i = num1; i < num2; i++) {
-        listOfNumbers + `${i}, `;
+      for (let i = num1+1; i < num2; i++) {
+        listOfNumbers += `${i}, `;
       }
 
-      alert(listOfNumber);
+      alert(listOfNumbers);
 
       console.log('-- interaction log --');
       console.log('input1:', typeof input1, '\n', input1);
@@ -43,7 +43,7 @@
 
 <body>
   <section id='user-interface' class='centered'>
-    <button onclick='numbersBetweenHandlers()'>Print numbers between ...</button>
+    <button onclick='numbersBetweenHandler()'>Print numbers between ...</button>
   </section>
 </body>
 

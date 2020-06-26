@@ -13,18 +13,18 @@
      * @returns {string}
      */
     function numbersBetween(num1, num2) {
-      if (typeof num1 !== '_') { throw new TypeError(); }
-      if (typeof num2 !== '_') { throw new TypeError(); }
+      if (typeof num1 !== 'number') { throw new TypeError(); }
+      if (typeof num2 !== 'number') { throw new TypeError(); }
 
       let listOfNumbers = '';
-      let i = _;
-      while (_ <= num2) {
-        listOfNumbers += `${_}_ `;
-        i_;
+      let i = num1;
+      while (num1 <= num2) {
+        listOfNumbers += `${i}, `;
+        i++;
       }
 
-      if (typeof listOfNumbers !== '_') { throw new TypeError(); }
-      return _;
+      if (typeof listOfNumbers !== 'string') { throw new TypeError(); }
+      return listOfNumbers;
     }
 
     console.log('testing: numbersBetween ');
